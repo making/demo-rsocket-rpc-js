@@ -1,7 +1,4 @@
-# Hello Vanilla JS
-
-A template project for [Vanilla JS](http://vanilla-js.com/).
-
+# RSocket RPC + Vanilla JS
 
 ```
 yarn install
