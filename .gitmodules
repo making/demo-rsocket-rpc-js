@@ -1,0 +1,3 @@
+[submodule "demo-spring-boot-rsocket-rpc"]
+	path = demo-spring-boot-rsocket-rpc
+	url = https://github.com/making/demo-spring-boot-rsocket-rpc.git

@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "google-protobuf": "^3.10.0",
+    "rsocket-core": "^0.0.16",
+    "rsocket-rpc-core": "^0.1.6",
+    "rsocket-rpc-metrics": "^0.1.6",
+    "rsocket-rpc-protobuf": "^0.1.6",
+    "rsocket-rpc-tracing": "^0.1.6",
+    "rsocket-websocket-client": "^0.0.16"
+  },
   "license": "Apache-2.0",
   "licenses": [
     {
@@ -22,6 +30,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --mode development --open"
+    "dev": "webpack-dev-server --mode development --open",
+    "protoc": "protoc --proto_path=./demo-spring-boot-rsocket-rpc/src/main/proto --proto_path=node_modules/rsocket-rpc-protobuf/proto --js_out=import_style=commonjs,binary:src/proto --rsocket_rpc_out=src/proto --plugin=protoc-gen-rsocket_rpc=node_modules/.bin/rsocket_rpc_js_protoc_plugin hello.proto"
   }
 }
